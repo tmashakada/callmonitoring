@@ -12,6 +12,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import lombok.Data;
 
 /**
@@ -30,4 +32,19 @@ public class Result implements Serializable{
     
     @Column(name = "updated_ts")
     private LocalDateTime updatedTimeStamp;
+    
+    @ManyToOne
+    @JoinColumn(name = "call_id", referencedColumnName = "id")
+    private Call  call;
+    
+    @ManyToOne
+    @JoinColumn(name = "question_id", referencedColumnName = "id")
+    private Question  question;
+   
+    private int answer;
+    
+    private int score ;
+    @Column(name = "max_possible")
+    private int maxPossible;
+    
 }

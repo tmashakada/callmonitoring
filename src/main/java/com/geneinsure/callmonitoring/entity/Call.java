@@ -7,11 +7,13 @@ package com.geneinsure.callmonitoring.entity;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import lombok.Data;
 
 /**
@@ -38,4 +40,8 @@ public class Call implements Serializable{
     private String callRecordingRef;
     @Column(name="customer_number")
     private String customerNumber;
+    
+    @OneToMany(mappedBy = "call")
+    private List<Result> results;
+    
 }
