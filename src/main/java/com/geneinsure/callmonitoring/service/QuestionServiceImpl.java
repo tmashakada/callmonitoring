@@ -5,6 +5,10 @@
  */
 package com.geneinsure.callmonitoring.service;
 
+import com.geneinsure.callmonitoring.entity.Question;
+import com.geneinsure.callmonitoring.repository.QuestionRepository;
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -13,5 +17,13 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class QuestionServiceImpl implements QuestionService{
+
+     @Autowired
+     QuestionRepository questionRepository;
+    @Override
+    public List<Question> getAllQuestions() {
+        return    questionRepository.findAllByOrderByQuestionNumberAsc();
+       
+    }
     
 }

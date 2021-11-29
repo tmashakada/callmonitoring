@@ -27,15 +27,18 @@ public class Question implements Serializable{
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Long id;
     
-    private String type;
+    @Column(name = "question_type")
+    private String questionType;
     
-    private String decscription;
+    private String description;
     private String responseType;
     @Column(nullable = false,name = "created_ts")
     private LocalDateTime createdTimeStamp;
     
     @Column(name = "updated_ts")
     private LocalDateTime updatedTimeStamp;
+    @Column(name = "question_number")
+    private int questionNumber;
     
     @OneToMany(mappedBy = "question")
     private List<Result> results;

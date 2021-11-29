@@ -5,10 +5,15 @@
  */
 package com.geneinsure.callmonitoring.controller;
 
+import java.io.Serializable;
+import javax.inject.Named;
+import javax.faces.bean.ViewScoped;
 /**
  *
  * @author "Tafadzwa"
  */
-public class ResultBean {
+@Named
+@ViewScoped
+public class ResultBean implements Serializable{
     
 }

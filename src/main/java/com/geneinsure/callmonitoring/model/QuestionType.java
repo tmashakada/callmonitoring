@@ -3,12 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.geneinsure.callmonitoring.controller;
+package com.geneinsure.callmonitoring.model;
+
+import lombok.Data;
 
 /**
  *
  * @author "Tafadzwa"
  */
-public class CallBean {
-    
+@Data
+public class QuestionType {
+     private String questiongrpType;
 }

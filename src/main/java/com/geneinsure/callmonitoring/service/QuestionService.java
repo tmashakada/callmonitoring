@@ -5,10 +5,13 @@
  */
 package com.geneinsure.callmonitoring.service;
 
+import com.geneinsure.callmonitoring.entity.Question;
+import java.util.List;
+
 /**
  *
  * @author "Tafadzwa"
  */
 public interface QuestionService {
-    
+    public List<Question> getAllQuestions();
 }

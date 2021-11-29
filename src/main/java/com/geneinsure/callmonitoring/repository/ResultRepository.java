@@ -5,7 +5,6 @@
  */
 package com.geneinsure.callmonitoring.repository;
 
-import com.geneinsure.callmonitoring.entity.Call;
 import com.geneinsure.callmonitoring.entity.Result;
 import org.springframework.data.jpa.repository.JpaRepository;
 

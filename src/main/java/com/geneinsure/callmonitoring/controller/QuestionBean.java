@@ -5,10 +5,19 @@
  */
 package com.geneinsure.callmonitoring.controller;
 
+import java.io.Serializable;
+import java.util.HashMap;
+import java.util.Map;
+import javax.enterprise.context.SessionScoped;
+import javax.inject.Named;
+
 /**
  *
  * @author "Tafadzwa"
  */
-public class QuestionBean {
-    
+
+@Named
+@SessionScoped
+public class QuestionBean implements Serializable{
+     
 }

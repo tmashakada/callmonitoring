@@ -22,7 +22,7 @@ import lombok.Data;
  */
 @Entity
 @Data
-public class Call implements Serializable{
+public class Calls implements Serializable{
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Long id;

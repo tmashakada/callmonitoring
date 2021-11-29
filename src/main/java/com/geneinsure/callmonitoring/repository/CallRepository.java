@@ -5,13 +5,13 @@
  */
 package com.geneinsure.callmonitoring.repository;
 
-import com.geneinsure.callmonitoring.entity.Call;
+import com.geneinsure.callmonitoring.entity.Calls;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
  *
  * @author "Tafadzwa"
  */
-public interface CallRepository extends JpaRepository<Call, Long>{
+public interface CallRepository extends JpaRepository<Calls, Long>{
     
 }

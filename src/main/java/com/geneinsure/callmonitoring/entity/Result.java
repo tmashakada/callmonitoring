@@ -35,7 +35,7 @@ public class Result implements Serializable{
     
     @ManyToOne
     @JoinColumn(name = "call_id", referencedColumnName = "id")
-    private Call  call;
+    private Calls  call;
     
     @ManyToOne
     @JoinColumn(name = "question_id", referencedColumnName = "id")
